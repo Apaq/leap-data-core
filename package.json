@@ -1,0 +1,40 @@
+{
+  "name": "@apaq/leap-data-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apaq/leap-data-core.git"
+  },
+  "author": "Apaq",
+  "bugs": {
+    "url": "https://github.com/Apaq/leap-data-core/issues"
+  },
+  "homepage": "https://github.com/Apaq/leap-data-core#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.12.15",
+    "rollup": "^2.52.7",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
