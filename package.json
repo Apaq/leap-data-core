@@ -32,7 +32,9 @@
     "rollup": "^2.52.7",
     "rollup-plugin-dts": "^3.0.2",
     "rollup-plugin-esbuild": "^4.5.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+		"load-json-file": "^7.0.1",
+		"write-json-file": "^5.0.0"
   },
   "dependencies": {
     "typescript": "^4.2.3"
