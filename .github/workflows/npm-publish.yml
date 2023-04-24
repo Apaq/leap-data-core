@@ -20,7 +20,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
-      - run: npm run publish-all
+      - run: node ./scripts/publish.mjs
         env:
           VERSION: ${{ github.event.release.name }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
