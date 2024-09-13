@@ -70,17 +70,12 @@ export interface CrudRepository<TYPE, IDTYPE> {
     delete(entity: TYPE): Promise<void>;
 
     /**
-     * Deletes multiple entities from the repository.
+     * Deletes multiple entities from the repository. If entities are specified, then only the specified will be deleted.
+     * Otherwise all entities will be deleted.
      *
-     * @param {TYPE[]} entities - The entities to delete.
+     * @param {TYPE[]} entities - The entities to delete. (Optional)
      * @returns {Promise<void>} - A promise that resolves when the entities are deleted.
      */
-    deleteAll(entities: TYPE[]): Promise<void>;
+    deleteAll(entities?: TYPE[]): Promise<void>;
 
-    /**
-     * Deletes all entities from the repository.
-     *
-     * @returns {Promise<void>} - A promise that resolves when the entities are deleted.
-     */
-    deleteAll(): Promise<void>;
 }
